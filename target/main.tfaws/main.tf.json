@@ -103,7 +103,7 @@
         "cluster_id": "ex-redis-c8603b68",
         "engine": "redis",
         "engine_version": "6.2",
-        "node_type": "cache.t4g.small",
+        "node_type": "cache.t4g.large",
         "num_cache_nodes": 1,
         "parameter_group_name": "default.redis6.x",
         "security_group_ids": [
