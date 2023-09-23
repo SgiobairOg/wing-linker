@@ -1,0 +1,100 @@
+{
+  "version": "connections-0.1",
+  "connections": [
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-5eee3f2b",
+      "target": "root/Default/Default/LinkManager/ex.Redis",
+      "name": "set()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-5eee3f2b",
+      "target": "root/Default/Default/LinkManager/ex.Redis",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-5eee3f2b",
+      "target": "root/Default/Default/LinkManager",
+      "name": "_add()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-5eee3f2b",
+      "target": "root/Default/Default/LinkManager",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-5eee3f2b",
+      "target": "root/Default/Default/LinkManager",
+      "name": "add()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-5eee3f2b",
+      "target": "root/Default/Default/LinkService/$Closure1",
+      "name": "handle()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-5eee3f2b",
+      "target": "root/Default/Default/LinkService/$Closure1",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api",
+      "target": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-5eee3f2b",
+      "name": "post()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkManager/ex.Redis",
+      "name": "get()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkManager/ex.Redis",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkManager",
+      "name": "_retrieve()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkManager/ex.Redis",
+      "name": "hget()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkManager/ex.Redis",
+      "name": "hset()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkManager",
+      "name": "_visit()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkManager",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkManager",
+      "name": "visit()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkService/$Closure2",
+      "name": "handle()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "target": "root/Default/Default/LinkService/$Closure2",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/Default/LinkService/cloud.Api",
+      "target": "root/Default/Default/LinkService/cloud.Api/cloud.Api-OnRequest-93bf46b1",
+      "name": "get()"
+    }
+  ]
+}

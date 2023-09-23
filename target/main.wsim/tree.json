@@ -1,0 +1,152 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "root",
+    "path": "root",
+    "children": {
+      "cloud.TestRunner": {
+        "id": "cloud.TestRunner",
+        "path": "root/cloud.TestRunner",
+        "constructInfo": {
+          "fqn": "@winglang/sdk.std.TestRunner",
+          "version": "0.0.0"
+        },
+        "display": {
+          "title": "TestRunner",
+          "description": "A suite of APIs for running tests and collecting results.",
+          "hidden": true
+        }
+      },
+      "Default": {
+        "id": "Default",
+        "path": "root/Default",
+        "children": {
+          "LinkManager": {
+            "id": "LinkManager",
+            "path": "root/Default/LinkManager",
+            "children": {
+              "ex.Redis": {
+                "id": "ex.Redis",
+                "path": "root/Default/LinkManager/ex.Redis",
+                "constructInfo": {
+                  "fqn": "@winglang/sdk.ex.Redis",
+                  "version": "0.0.0"
+                },
+                "display": {
+                  "title": "Redis",
+                  "description": "A Redis server"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@winglang/sdk.std.Resource",
+              "version": "0.0.0"
+            }
+          },
+          "LinkService": {
+            "id": "LinkService",
+            "path": "root/Default/LinkService",
+            "children": {
+              "cloud.Api": {
+                "id": "cloud.Api",
+                "path": "root/Default/LinkService/cloud.Api",
+                "children": {
+                  "OnRequestHandler-dcd34090": {
+                    "id": "OnRequestHandler-dcd34090",
+                    "path": "root/Default/LinkService/cloud.Api/OnRequestHandler-dcd34090",
+                    "constructInfo": {
+                      "fqn": "@winglang/sdk.cloud.Function",
+                      "version": "0.0.0"
+                    },
+                    "display": {
+                      "title": "post()",
+                      "description": "A cloud function (FaaS)",
+                      "sourceModule": "@winglang/sdk"
+                    }
+                  },
+                  "ApiEventMapping-dcd34090": {
+                    "id": "ApiEventMapping-dcd34090",
+                    "path": "root/Default/LinkService/cloud.Api/ApiEventMapping-dcd34090",
+                    "constructInfo": {
+                      "fqn": "@winglang/sdk.std.Resource",
+                      "version": "0.0.0"
+                    },
+                    "display": {
+                      "hidden": true
+                    }
+                  },
+                  "OnRequestHandler-58b7959b": {
+                    "id": "OnRequestHandler-58b7959b",
+                    "path": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+                    "constructInfo": {
+                      "fqn": "@winglang/sdk.cloud.Function",
+                      "version": "0.0.0"
+                    },
+                    "display": {
+                      "title": "get()",
+                      "description": "A cloud function (FaaS)",
+                      "sourceModule": "@winglang/sdk"
+                    }
+                  },
+                  "ApiEventMapping-58b7959b": {
+                    "id": "ApiEventMapping-58b7959b",
+                    "path": "root/Default/LinkService/cloud.Api/ApiEventMapping-58b7959b",
+                    "constructInfo": {
+                      "fqn": "@winglang/sdk.std.Resource",
+                      "version": "0.0.0"
+                    },
+                    "display": {
+                      "hidden": true
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@winglang/sdk.cloud.Api",
+                  "version": "0.0.0"
+                },
+                "display": {
+                  "title": "Api",
+                  "description": "A REST API endpoint"
+                }
+              },
+              "$Closure1": {
+                "id": "$Closure1",
+                "path": "root/Default/LinkService/$Closure1",
+                "constructInfo": {
+                  "fqn": "@winglang/sdk.std.Resource",
+                  "version": "0.0.0"
+                },
+                "display": {
+                  "hidden": true
+                }
+              },
+              "$Closure2": {
+                "id": "$Closure2",
+                "path": "root/Default/LinkService/$Closure2",
+                "constructInfo": {
+                  "fqn": "@winglang/sdk.std.Resource",
+                  "version": "0.0.0"
+                },
+                "display": {
+                  "hidden": true
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@winglang/sdk.std.Resource",
+              "version": "0.0.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@winglang/sdk.std.Resource",
+          "version": "0.0.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@winglang/sdk.core.App",
+      "version": "0.0.0"
+    }
+  }
+}

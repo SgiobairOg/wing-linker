@@ -1,0 +1,80 @@
+{
+  "version": "connections-0.1",
+  "connections": [
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-dcd34090",
+      "target": "root/Default/LinkManager/ex.Redis",
+      "name": "set()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-dcd34090",
+      "target": "root/Default/LinkManager/ex.Redis",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-dcd34090",
+      "target": "root/Default/LinkManager",
+      "name": "_add()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-dcd34090",
+      "target": "root/Default/LinkManager",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-dcd34090",
+      "target": "root/Default/LinkManager",
+      "name": "add()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api",
+      "target": "root/Default/LinkService/cloud.Api/OnRequestHandler-dcd34090",
+      "name": "post()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "target": "root/Default/LinkManager/ex.Redis",
+      "name": "get()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "target": "root/Default/LinkManager/ex.Redis",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "target": "root/Default/LinkManager",
+      "name": "_retrieve()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "target": "root/Default/LinkManager/ex.Redis",
+      "name": "hget()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "target": "root/Default/LinkManager/ex.Redis",
+      "name": "hset()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "target": "root/Default/LinkManager",
+      "name": "_visit()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "target": "root/Default/LinkManager",
+      "name": "$inflight_init()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "target": "root/Default/LinkManager",
+      "name": "visit()"
+    },
+    {
+      "source": "root/Default/LinkService/cloud.Api",
+      "target": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "name": "get()"
+    }
+  ]
+}

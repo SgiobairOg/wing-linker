@@ -1,0 +1,172 @@
+{
+  "resources": [
+    {
+      "type": "wingsdk.cloud.TestRunner",
+      "path": "root/cloud.TestRunner",
+      "props": {
+        "tests": {}
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.redis.Redis",
+      "path": "root/Default/LinkManager/ex.Redis",
+      "props": {},
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Function",
+      "path": "root/Default/LinkService/cloud.Api/OnRequestHandler-dcd34090",
+      "props": {
+        "sourceCodeFile": ".wing/onrequesthandler-dcd34090_c83af006.js",
+        "sourceCodeLanguage": "javascript",
+        "environmentVariables": {
+          "WING_TARGET": "sim",
+          "REDIS_HANDLE_9dea43ad": "${root/Default/LinkManager/ex.Redis#attrs.handle}"
+        },
+        "timeout": 60000
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Api",
+      "path": "root/Default/LinkService/cloud.Api",
+      "props": {
+        "openApiSpec": {
+          "openapi": "3.0.3",
+          "paths": {
+            "/add": {
+              "post": {
+                "operationId": "post-add",
+                "responses": {
+                  "200": {
+                    "description": "200 response",
+                    "content": {},
+                    "headers": {
+                      "Access-Control-Allow-Origin": {
+                        "schema": {
+                          "type": "string"
+                        }
+                      },
+                      "Access-Control-Allow-Methods": {
+                        "schema": {
+                          "type": "string"
+                        }
+                      },
+                      "Access-Control-Allow-Headers": {
+                        "schema": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "parameters": []
+              }
+            },
+            "/{key}": {
+              "get": {
+                "operationId": "get-{key}",
+                "responses": {
+                  "200": {
+                    "description": "200 response",
+                    "content": {},
+                    "headers": {
+                      "Access-Control-Allow-Origin": {
+                        "schema": {
+                          "type": "string"
+                        }
+                      },
+                      "Access-Control-Allow-Methods": {
+                        "schema": {
+                          "type": "string"
+                        }
+                      },
+                      "Access-Control-Allow-Headers": {
+                        "schema": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "key",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "corsHeaders": {
+          "defaultResponse": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "",
+            "Access-Control-Allow-Credentials": "false"
+          },
+          "optionsResponse": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Content-Type,Authorization,X-Requested-With",
+            "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,HEAD,OPTIONS"
+          }
+        }
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.sim.EventMapping",
+      "path": "root/Default/LinkService/cloud.Api/ApiEventMapping-dcd34090",
+      "props": {
+        "subscriber": "${root/Default/LinkService/cloud.Api/OnRequestHandler-dcd34090#attrs.handle}",
+        "publisher": "${root/Default/LinkService/cloud.Api#attrs.handle}",
+        "subscriptionProps": {
+          "routes": [
+            {
+              "path": "/add",
+              "method": "POST"
+            }
+          ]
+        }
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.cloud.Function",
+      "path": "root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b",
+      "props": {
+        "sourceCodeFile": ".wing/onrequesthandler-58b7959b_c8dc467b.js",
+        "sourceCodeLanguage": "javascript",
+        "environmentVariables": {
+          "WING_TARGET": "sim",
+          "REDIS_HANDLE_9dea43ad": "${root/Default/LinkManager/ex.Redis#attrs.handle}"
+        },
+        "timeout": 60000
+      },
+      "attrs": {}
+    },
+    {
+      "type": "wingsdk.sim.EventMapping",
+      "path": "root/Default/LinkService/cloud.Api/ApiEventMapping-58b7959b",
+      "props": {
+        "subscriber": "${root/Default/LinkService/cloud.Api/OnRequestHandler-58b7959b#attrs.handle}",
+        "publisher": "${root/Default/LinkService/cloud.Api#attrs.handle}",
+        "subscriptionProps": {
+          "routes": [
+            {
+              "path": "/{key}",
+              "method": "GET"
+            }
+          ]
+        }
+      },
+      "attrs": {}
+    }
+  ],
+  "sdkVersion": "0.31.8"
+}
